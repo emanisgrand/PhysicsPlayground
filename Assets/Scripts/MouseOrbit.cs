@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseOrbit : MonoBehaviour {
-    public Transform target;
-    public float distance = 10.0f;
-
-    public float xSpeed = 250.0f;
-    public float ySpeed = 120.0f;
-
-    public float yMinLimit = -20.0f;
-    public float yMaxLimit = 80.0f;
-
-    public float distanceMin = .5f;
-    public float distanceMax = 15f;
+    public Transform  target;
+    public float      distance     = 10.0f;
+    public float      xSpeed       = 250.0f;
+    public float      ySpeed       = 120.0f;
+    public float      yMinLimit    = -20.0f;
+    public float      yMaxLimit    = 80.0f;
+    public float      distanceMin  = .5f;
+    public float      distanceMax  = 15f;
 
     private Rigidbody rigidbody;
 
