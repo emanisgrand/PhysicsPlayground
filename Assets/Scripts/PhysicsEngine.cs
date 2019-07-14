@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PhysicsEngine : MonoBehaviour
-{
+public class PhysicsEngine : MonoBehaviour {
     //DrawForces variables
-    private LineRenderer lineRenderer;
-    private int          numberOfForces;
-    public bool          showTrails     = true;
+    private LineRenderer  lineRenderer;
+    private int           numberOfForces;
+    public  bool          showTrails     = true;
 
     //the other physics engine variables
     public Vector3       velocityVector;  //average velocity this FixedUpdate();
@@ -44,8 +43,7 @@ public class PhysicsEngine : MonoBehaviour
         transform.position += velocityVector * Time.deltaTime;
     }
 
-    void SetupThrustTrails()
-    {
+    void SetupThrustTrails()  {
         lineRenderer = gameObject.AddComponent<LineRenderer>();
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
         lineRenderer.SetColors(Color.yellow, Color.yellow);
@@ -53,10 +51,9 @@ public class PhysicsEngine : MonoBehaviour
         lineRenderer.useWorldSpace = false;
     }
 
-    void RenderTrails()
-    { //only for updating the trails
-        if (showTrails)
-        {
+    void RenderTrails() { 
+        //only for updating the trails
+        if (showTrails) {
             lineRenderer.enabled = true;
             numberOfForces = forceVectorList.Count;
             lineRenderer.SetVertexCount(numberOfForces * 2);
@@ -67,9 +64,7 @@ public class PhysicsEngine : MonoBehaviour
                 lineRenderer.SetPosition(i + 1, -forceVector);
                 i = i + 2;
             }
-        }
-        else
-        {
+        } else {
             lineRenderer.enabled = false;
         }
     }
