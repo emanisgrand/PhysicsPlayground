@@ -2,19 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseOrbit : MonoBehaviour
-{
-    public Transform target;
-    public float distance = 10.0f;
-
-    public float xSpeed = 250.0f;
-    public float ySpeed = 120.0f;
-
-    public float yMinLimit = -20.0f;
-    public float yMaxLimit = 80.0f;
-
-    public float distanceMin = .5f;
-    public float distanceMax = 15f;
+public class MouseOrbit : MonoBehaviour {
+    public Transform  target;
+    public float      distance     = 10.0f;
+    public float      xSpeed       = 250.0f;
+    public float      ySpeed       = 120.0f;
+    public float      yMinLimit    = -20.0f;
+    public float      yMaxLimit    = 80.0f;
+    public float      distanceMin  = .5f;
+    public float      distanceMax  = 15f;
 
     private Rigidbody rigidbody;
 
@@ -22,8 +18,7 @@ public class MouseOrbit : MonoBehaviour
     float y = 0.0f;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         Vector3 angles = transform.eulerAngles;
         y = angles.y;
         x = angles.x;
@@ -36,10 +31,8 @@ public class MouseOrbit : MonoBehaviour
         }
     }
 
-    void LateUpdate()
-    {
-        if (target)
-        {
+    void LateUpdate() {
+        if (target) {
             x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
             y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
 
@@ -62,8 +55,7 @@ public class MouseOrbit : MonoBehaviour
         }
     }
 
-    public static float ClampAngle(float angle, float min, float max)
-    {
+    public static float ClampAngle(float angle, float min, float max) {
         if (angle < -360)
             angle += 360;
         if (angle > 360)

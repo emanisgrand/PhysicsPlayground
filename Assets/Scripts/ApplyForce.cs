@@ -8,13 +8,11 @@ public class ApplyForce : MonoBehaviour
     public Vector3 forceVector;
     private PhysicsEngine physicsEngine;
 
-    private void Start()
-    {
+    private void Start() {
         physicsEngine = GetComponent<PhysicsEngine>();
     }
 
-    private void FixedUpdate()
-    {
+    private void FixedUpdate() {
         physicsEngine.AddForce(forceVector);
     }
 
