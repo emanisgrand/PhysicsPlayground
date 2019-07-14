@@ -6,19 +6,18 @@ public class PhysicsEngine : MonoBehaviour
 {
     //DrawForces variables
     private LineRenderer lineRenderer;
-    private int numberOfForces;
-    public bool showTrails = true;
+    private int          numberOfForces;
+    public bool          showTrails     = true;
 
     //the other physics engine variables
-    public Vector3 velocityVector;  //average velocity this FixedUpdate();
-    public Vector3 netForceVector;
-    public float mass;
+    public Vector3       velocityVector;  //average velocity this FixedUpdate();
+    public Vector3       netForceVector;
+    public float         mass;
 
     private List<Vector3> forceVectorList = new List<Vector3>();
 
 
-    void Start()
-    {
+    void Start() {
         SetupThrustTrails();    
     }
 
