@@ -20,6 +20,7 @@ public class DrawForces : MonoBehaviour {
 	void Start () {
 		lineRenderer = gameObject.AddComponent<LineRenderer>();
 		lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
+		//TODO: SetColors is obsolete - update to startcolor, etc. 
 		lineRenderer.SetColors(Color.yellow, Color.yellow);
 		lineRenderer.SetWidth(0.2F, 0.2F);
 		lineRenderer.useWorldSpace = false;
