@@ -8,10 +8,11 @@ using System.Collections.Generic;
 [DisallowMultipleComponent]
 [RequireComponent (typeof(PhysicsEngine))]
 public class DrawForces : MonoBehaviour {
-
+	//? Public member variables
 	public bool showTrails = true;
-
 	public List<Vector3> forceVectorList = new List<Vector3>();
+	
+	//? Private member variables
 	private LineRenderer lineRenderer;
 	private int numberOfForces;
 	
