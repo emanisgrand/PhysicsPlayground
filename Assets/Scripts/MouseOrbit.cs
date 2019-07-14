@@ -12,7 +12,7 @@ public class MouseOrbit : MonoBehaviour {
     public float      distanceMin  = .5f;
     public float      distanceMax  = 15f;
 
-    private Rigidbody rigidbody;
+    private Rigidbody rigidBody;
 
     float x = 0.0f;
     float y = 0.0f;
@@ -23,11 +23,11 @@ public class MouseOrbit : MonoBehaviour {
         y = angles.y;
         x = angles.x;
 
-        rigidbody = GetComponent<Rigidbody>();
+        rigidBody = GetComponent<Rigidbody>();
 
-        if (rigidbody != null)
+        if (rigidBody != null)
         {
-            rigidbody.freezeRotation = true;
+            rigidBody.freezeRotation = true;
         }
     }
 
