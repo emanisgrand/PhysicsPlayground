@@ -26,7 +26,6 @@ public class DrawForces : MonoBehaviour {
 		lineRenderer.useWorldSpace = false;
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		if (showTrails) {
 			lineRenderer.enabled = true;
